@@ -1,16 +1,31 @@
 import React from 'react';
+import DragTask from './DragTask';
 import './Tasks.css';
 
-function Tasks({ tasks, columnId }) {
+function Tasks({ tasks, columnId, onDragStart, onDragOver, onDrop }) {
+  const handleDragOver = (e) => {
+    e.preventDefault();
+    onDragOver(e, columnId);
+  };
+
+  const handleDrop = (e) => {
+    e.preventDefault();
+    const taskId = e.dataTransfer.getData('taskId');
+    onDrop(taskId, columnId);
+  };
+
   return (
-    <div className={`task-list ${columnId}`}>
+    <div
+      onDragOver={handleDragOver}
+      onDrop={handleDrop}
+      className={`task-list ${columnId}`}
+    >
       {tasks.map((task) => (
-        <div key={task.id} className="task-item">
-          <div className="task-title">{task.title}</div>
-          <div className="task-description">{task.description}</div>
-          <div className="task-deadline">Deadline: {task.date}</div>
-          <button className="edit-button">Edit</button>
-        </div>
+        <DragTask
+          key={task.id}
+          task={task}
+          onDragStart={onDragStart}
+        />
       ))}
     </div>
   );
