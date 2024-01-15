@@ -1,11 +1,15 @@
 import React from 'react';
 import './Board.css';
+import AddTaskButton from './AddTaskButton';
 
 function Board() {
+  const handleTaskCreate = (formData) => {
+  };
   return (
     <div className="board">
       <div className="column" id="open-column">
         <h2 className="column-title">OPEN</h2>
+        <AddTaskButton onTaskCreate={handleTaskCreate} />
         <div className="task-list" id="open-list"></div>
       </div>
 

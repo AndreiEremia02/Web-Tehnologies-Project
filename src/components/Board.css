@@ -35,6 +35,9 @@
     margin-bottom: 20px;
 }
 
+#open-column{
+    background-color: #92c8ff;
+}
 #open-column .task-list {
     height: 350px;
     overflow-y: auto;

@@ -1,0 +1,78 @@
+#create-task-button {
+    text-align: center;
+}
+
+#add-task-button {
+    display: block;
+    margin: 0 auto 15px auto;
+    padding: 10px 20px; 
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px; 
+}
+
+#add-task-button:hover {
+    background-color: #45a049;
+    -webkit-animation: pulse 2s;
+    animation: pulse 2s;
+    animation-iteration-count: 3;
+}
+
+#submit-button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 4px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
+
+#submit-button:hover {
+    background-color: #45a049;
+    -webkit-animation: pulse 2s;
+    animation: pulse 2s;
+    animation-iteration-count: 3;
+}
+
+#cancel-button {
+    background-color: #92c8ff;
+    color: #fff;
+    padding: 4px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
+
+#cancel-button:hover {
+    background-color: #81c0ff;
+    -webkit-animation: pulse 2s;
+    animation: pulse 2s;
+    animation-iteration-count: 3;
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    z-index: 1000; 
+    width: 200px; 
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+.error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 4px;
+}
