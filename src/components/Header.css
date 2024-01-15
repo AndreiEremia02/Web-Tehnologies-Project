@@ -1,0 +1,21 @@
+.header {
+    background-color: #83c1ff;
+    padding: 10px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; /* Make the header span the full width of the viewport */
+    box-sizing: border-box; /* Include padding and border in the width calculation */
+}
+
+.profile-picture {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.logo{
+    width: 200px;
+    height: auto;
+}
