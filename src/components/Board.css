@@ -1,0 +1,53 @@
+.board {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    margin-top: 50px;
+    justify-content: center;
+}
+
+
+.column {
+    background-color: #ebecf0;
+    border-radius: 8px;
+    padding: 16px;
+    min-width: 250px;
+    position: relative;
+    max-height: 500px;
+    height: calc(100vh - 80px);
+    margin-bottom: 20px;
+}
+
+.column-title {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.task-list {
+    height: 405px;
+    overflow-y: auto;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    margin-bottom: 20px;
+}
+
+#open-column .task-list {
+    height: 350px;
+    overflow-y: auto;
+}
+
+#pending-column {
+    background-color: #ecff6f;
+}
+
+#completed-column {
+    background-color: #8aff90;
+}
+
+#closed-column {
+    background-color: #ff5555;
+}
