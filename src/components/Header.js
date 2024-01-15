@@ -1,4 +1,3 @@
-// Header.js
 import React from 'react';
 import './Header.css';
 import planitLogo from '../media/planitnow.png';
